@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadLanguage(lang) {
         if (!SUPPORTED_LANGS.includes(lang)) lang = 'en';
         try {
-            const resp = await fetch(`lang/${lang}.json`);
+            const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+            const resp = await fetch(`${basePath}lang/${lang}.json`);
             if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
             currentTranslations = await resp.json();
             applyTranslations();
@@ -69,19 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.querySelectorAll('.lang-option').forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
                 const lang = btn.dataset.lang;
-                loadLanguage(lang);
                 langDropdown.classList.remove('open');
+                loadLanguage(lang);
             });
         });
 
         document.addEventListener('click', () => {
             langDropdown.classList.remove('open');
-        });
-
-        langDropdown.addEventListener('click', (e) => {
-            e.stopPropagation();
         });
     }
 
