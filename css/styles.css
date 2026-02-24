@@ -84,6 +84,9 @@ body {
 .nav-logo img {
     height: 40px;
     width: auto;
+    border-radius: 6px;
+    background: transparent;
+    mix-blend-mode: lighten;
 }
 
 .nav-logo-text {
