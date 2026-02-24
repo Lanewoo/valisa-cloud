@@ -1,6 +1,99 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Navbar scroll effect
+    // ===== i18n MODULE =====
+    const SUPPORTED_LANGS = ['en', 'tr', 'zh', 'es', 'fr', 'de', 'hu'];
+    const LANG_FLAGS = { en: '🇬🇧', tr: '🇹🇷', zh: '🇨🇳', es: '🇪🇸', fr: '🇫🇷', de: '🇩🇪', hu: '🇭🇺' };
+    const LANG_CODES = { en: 'EN', tr: 'TR', zh: '中文', es: 'ES', fr: 'FR', de: 'DE', hu: 'HU' };
+    let currentTranslations = {};
+
+    async function loadLanguage(lang) {
+        if (!SUPPORTED_LANGS.includes(lang)) lang = 'en';
+        try {
+            const resp = await fetch(`lang/${lang}.json`);
+            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+            currentTranslations = await resp.json();
+            applyTranslations();
+            document.documentElement.lang = lang;
+            localStorage.setItem('valisa-lang', lang);
+            updateLangToggle(lang);
+        } catch (e) {
+            console.error(`Failed to load language "${lang}":`, e);
+            if (lang !== 'en') loadLanguage('en');
+        }
+    }
+
+    function applyTranslations() {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (currentTranslations[key] !== undefined) {
+                el.textContent = currentTranslations[key];
+            }
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (currentTranslations[key] !== undefined) {
+                el.placeholder = currentTranslations[key];
+            }
+        });
+    }
+
+    function updateLangToggle(lang) {
+        const flagEl = document.getElementById('langFlag');
+        const codeEl = document.getElementById('langCode');
+        if (flagEl) flagEl.textContent = LANG_FLAGS[lang] || '🇬🇧';
+        if (codeEl) codeEl.textContent = LANG_CODES[lang] || 'EN';
+
+        document.querySelectorAll('.lang-option').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+    }
+
+    function detectLanguage() {
+        const saved = localStorage.getItem('valisa-lang');
+        if (saved && SUPPORTED_LANGS.includes(saved)) return saved;
+
+        const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        const primary = browserLang.split('-')[0];
+        if (SUPPORTED_LANGS.includes(primary)) return primary;
+        return 'en';
+    }
+
+    // Language selector UI
+    const langToggle = document.getElementById('langToggle');
+    const langDropdown = document.getElementById('langDropdown');
+
+    if (langToggle && langDropdown) {
+        langToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.lang-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                loadLanguage(lang);
+                langDropdown.classList.remove('open');
+            });
+        });
+
+        document.addEventListener('click', () => {
+            langDropdown.classList.remove('open');
+        });
+
+        langDropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+
+    // Load initial language
+    const initialLang = detectLanguage();
+    if (initialLang !== 'en') {
+        loadLanguage(initialLang);
+    } else {
+        updateLangToggle('en');
+    }
+
+    // ===== NAVBAR =====
     const navbar = document.getElementById('navbar');
     const handleScroll = () => {
         navbar.classList.toggle('scrolled', window.scrollY > 50);
@@ -20,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
             : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
     });
 
-    // Close mobile menu on link click
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
@@ -28,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Smooth scroll for anchor links
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
@@ -41,12 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
+    // Fade-in animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -54,11 +141,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Active nav link highlighting
+    // Active nav highlighting
     const sections = document.querySelectorAll('section[id]');
     const navAnchors = navLinks.querySelectorAll('a[href^="#"]');
 
@@ -80,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     window.addEventListener('scroll', highlightNav, { passive: true });
 
-    // Contact form handling
+    // Contact form
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -90,11 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const btn = contactForm.querySelector('.btn-submit');
         const originalContent = btn.innerHTML;
+        const successText = currentTranslations['contact.form.success'] || 'Message Sent!';
         btn.innerHTML = `
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                 <polyline points="20 6 9 17 4 12"/>
             </svg>
-            Message Sent!
+            ${successText}
         `;
         btn.style.background = '#4caf50';
         btn.disabled = true;
@@ -109,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Form submission:', data);
     });
 
-    // Counter animation for hero stats
+    // Counter animation
     const animateCounter = (el, target) => {
         const isNumber = !isNaN(parseInt(target));
         if (!isNumber) return;

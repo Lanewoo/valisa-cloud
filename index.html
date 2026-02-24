@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valisa Cloud — Multi-Cloud Services for Europe, Türkiye &amp; Chinese Go-Global</title>
     <meta name="description" content="Valisa Cloud is a leading multi-cloud reseller offering AWS, Azure, Google Cloud, Alibaba Cloud and Huawei Cloud with exclusive discounts, consulting, migration, development and managed services.">
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,16 +17,32 @@
 <nav class="navbar" id="navbar">
     <div class="nav-container">
         <a href="#" class="nav-logo">
-            <img src="assets/images/logo.png" alt="Valisa Cloud">
+            <img src="assets/images/logo.svg" alt="Valisa Cloud">
             <span class="nav-logo-text">VALISA <span>CLOUD</span></span>
         </a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#regions">Regions</a></li>
-            <li><a href="#pricing">Solutions</a></li>
-            <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#why-us" data-i18n="nav.whyUs">Why Us</a></li>
+            <li><a href="#regions" data-i18n="nav.regions">Regions</a></li>
+            <li><a href="#pricing" data-i18n="nav.solutions">Solutions</a></li>
+            <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Get in Touch</a></li>
         </ul>
+        <div class="lang-selector" id="langSelector">
+            <button class="lang-toggle" id="langToggle" aria-label="Select language">
+                <span class="lang-flag" id="langFlag">🇬🇧</span>
+                <span class="lang-code" id="langCode">EN</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <button class="lang-option" data-lang="en"><span class="lang-flag">🇬🇧</span> English</button>
+                <button class="lang-option" data-lang="tr"><span class="lang-flag">🇹🇷</span> Türkçe</button>
+                <button class="lang-option" data-lang="zh"><span class="lang-flag">🇨🇳</span> 中文</button>
+                <button class="lang-option" data-lang="es"><span class="lang-flag">🇪🇸</span> Español</button>
+                <button class="lang-option" data-lang="fr"><span class="lang-flag">🇫🇷</span> Français</button>
+                <button class="lang-option" data-lang="de"><span class="lang-flag">🇩🇪</span> Deutsch</button>
+                <button class="lang-option" data-lang="hu"><span class="lang-flag">🇭🇺</span> Magyar</button>
+            </div>
+        </div>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
@@ -40,32 +56,32 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="hero-badge-dot"></span>
-                Authorized Multi-Cloud Partner
+                <span data-i18n="hero.badge">Authorized Multi-Cloud Partner</span>
             </div>
-            <h1>Your Gateway to <span class="highlight">Multi-Cloud</span> Excellence</h1>
-            <p>Valisa Cloud empowers businesses across Europe, Türkiye and Asia with best-in-class cloud solutions — AWS, Azure, Google Cloud, Alibaba Cloud and Huawei Cloud — all with exclusive partner discounts.</p>
+            <h1><span data-i18n="hero.title.pre">Your Gateway to</span> <span class="highlight" data-i18n="hero.title.highlight">Multi-Cloud</span> <span data-i18n="hero.title.post">Excellence</span></h1>
+            <p data-i18n="hero.description">Valisa Cloud empowers businesses across Europe, Türkiye and Asia with best-in-class cloud solutions — AWS, Azure, Google Cloud, Alibaba Cloud and Huawei Cloud — all with exclusive partner discounts.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>
-                    Start Your Journey
+                    <span data-i18n="hero.cta.primary">Start Your Journey</span>
                 </a>
                 <a href="#services" class="btn btn-outline">
-                    Explore Services
+                    <span data-i18n="hero.cta.secondary">Explore Services</span>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
                     <div class="hero-stat-number">5</div>
-                    <div class="hero-stat-label">Cloud Platforms</div>
+                    <div class="hero-stat-label" data-i18n="hero.stat.platforms">Cloud Platforms</div>
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-number">3+</div>
-                    <div class="hero-stat-label">Regions Served</div>
+                    <div class="hero-stat-label" data-i18n="hero.stat.regions">Regions Served</div>
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-number">24/7</div>
-                    <div class="hero-stat-label">Support</div>
+                    <div class="hero-stat-label" data-i18n="hero.stat.support">Support</div>
                 </div>
             </div>
         </div>
@@ -74,25 +90,20 @@
                 <div class="orbit-ring orbit-ring-1"></div>
                 <div class="orbit-ring orbit-ring-2"></div>
                 <div class="orbit-center">
-                    <img src="assets/images/logo.png" alt="Valisa Cloud">
+                    <img src="assets/images/logo.svg" alt="Valisa Cloud">
                 </div>
-                <!-- AWS -->
                 <div class="orbit-item orbit-item-1" title="Amazon Web Services">
                     <svg width="36" height="36" viewBox="0 0 24 24"><path d="M7.64 11.18c0 .26.03.47.08.62a4 4 0 0 0 .38.56c.06.08.08.16.08.23 0 .1-.06.2-.19.3l-.64.42a.48.48 0 0 1-.26.09c-.1 0-.2-.05-.3-.15a3 3 0 0 1-.36-.46 8 8 0 0 1-.3-.58 3.82 3.82 0 0 1-3.03 1.42c-.86 0-1.55-.25-2.06-.74-.5-.49-.76-1.15-.76-1.97 0-.87.31-1.58.93-2.11.62-.54 1.44-.8 2.48-.8.34 0 .7.03 1.06.08.37.06.75.14 1.15.24v-.75c0-.78-.16-1.33-.49-1.65-.32-.32-.87-.48-1.65-.48-.36 0-.72.04-1.1.13-.38.09-.74.2-1.1.35a2.9 2.9 0 0 1-.34.14.6.6 0 0 1-.15.03c-.13 0-.2-.1-.2-.29V5c0-.15.02-.27.07-.34.05-.07.14-.15.29-.22a6.1 6.1 0 0 1 1.28-.43 6.2 6.2 0 0 1 1.58-.2c1.2 0 2.08.28 2.65.82.56.55.84 1.38.84 2.49v3.28h.01zM4.4 12.59c.34 0 .68-.06 1.05-.18.36-.12.68-.34.95-.64.16-.19.28-.4.36-.65.08-.25.12-.55.12-.9v-.43a8.3 8.3 0 0 0-.92-.17 7.5 7.5 0 0 0-.94-.06c-.68 0-1.18.13-1.5.41-.33.27-.5.66-.5 1.17 0 .47.13.83.38 1.07.25.25.6.38 1 .38zm8.12 1.1c-.17 0-.28-.03-.35-.1-.07-.06-.13-.2-.18-.38L9.7 5.63c-.05-.2-.08-.32-.08-.38 0-.15.07-.23.22-.23h1c.17 0 .29.03.35.1.07.06.12.2.17.38l1.6 6.31 1.49-6.31c.04-.2.1-.32.17-.38.07-.06.2-.1.36-.1h.82c.17 0 .29.03.36.1.07.06.13.2.17.38l1.5 6.39L19.5 5.4c.05-.2.1-.32.17-.38.07-.06.19-.1.35-.1h.95c.15 0 .23.08.23.23 0 .04-.01.09-.02.15-.01.06-.03.13-.06.22l-2.4 7.58c-.05.2-.11.32-.18.38-.07.06-.2.1-.35.1h-.88c-.17 0-.29-.03-.36-.1-.07-.07-.13-.2-.17-.39l-1.48-6.15-1.47 6.14c-.04.2-.1.33-.17.39-.07.07-.2.1-.36.1h-.88z" fill="#F90"/><path d="M22.28 16.21c-2.87 2.12-7.04 3.25-10.62 3.25a19.24 19.24 0 0 1-12.99-4.96c-.27-.24-.03-.57.3-.39a26.15 26.15 0 0 0 12.99 3.44c3.19 0 6.69-.66 9.92-2.02.48-.22.89.32.4.68z" fill="#F90"/><path d="M23.42 14.93c-.37-.47-2.43-.22-3.36-.11-.28.03-.32-.21-.07-.39 1.65-1.16 4.35-.82 4.66-.44.31.4-.08 3.12-1.63 4.42-.24.2-.46.09-.36-.17.34-.86 1.13-2.84.76-3.31z" fill="#F90"/></svg>
                 </div>
-                <!-- Azure -->
                 <div class="orbit-item orbit-item-2" title="Microsoft Azure">
                     <svg width="36" height="36" viewBox="0 0 24 24"><path d="M13.05 4.24L7.4 18.72l.01.03H3.54L9.2 4.29a.96.96 0 0 1 .89-.6h2.1c.38 0 .72.23.86.55zM14.5 14.88l-3.57-4.3a.32.32 0 0 1 .05-.46l2.43-1.87a.96.96 0 0 1 1.48.3l3.7 7.13.02.04H14.5z" fill="#0089D6"/><path d="M17.15 8.18a.96.96 0 0 0-1.48-.3l-5.77 4.45a.32.32 0 0 0-.05.46l4.44 5.34.01.02 5.24.01L17.15 8.18z" fill="#0089D6" opacity=".8"/></svg>
                 </div>
-                <!-- Google Cloud -->
                 <div class="orbit-item orbit-item-3" title="Google Cloud">
                     <svg width="36" height="36" viewBox="0 0 24 24"><path d="M15.54 8.64h.86l2.44-2.44.12-1.03A10.46 10.46 0 0 0 2.09 9.29a1.2 1.2 0 0 1 .78-.28h4.86a5.02 5.02 0 0 1 7.8-.37z" fill="#EA4335"/><path d="M19.81 9.29a10.5 10.5 0 0 0-3.17-5.09l-3.52 3.52a5.02 5.02 0 0 1 1.83 3.99v.63a2.52 2.52 0 0 1 0 5.04h-5.03l-.63.63v3.15l.63.63h5.03a6.86 6.86 0 0 0 4.86-11.5z" fill="#4285F4"/><path d="M4.89 21.79h5.03v-4.41H4.89a2.49 2.49 0 0 1-1.04-.23l-.72.22-2.06 2.05-.18.67a6.82 6.82 0 0 0 4 1.7z" fill="#34A853"/><path d="M4.89 8.1a6.87 6.87 0 0 0-4 12.01l2.96-2.96a2.52 2.52 0 1 1 3.33-3.33l2.96-2.95A6.84 6.84 0 0 0 4.89 8.1z" fill="#FBBC05"/></svg>
                 </div>
-                <!-- Alibaba Cloud -->
                 <div class="orbit-item orbit-item-4" title="Alibaba Cloud">
                     <svg width="36" height="36" viewBox="0 0 24 24"><path d="M4.35 6.2c-.58 0-1.05.47-1.05 1.05v2.1L7.55 12l-4.25 2.65v2.1c0 .58.47 1.05 1.05 1.05h3.15l2.1-1.4V7.6L7.5 6.2H4.35zm15.3 0H16.5l-2.1 1.4v8.8l2.1 1.4h3.15c.58 0 1.05-.47 1.05-1.05v-2.1L16.45 12l4.25-2.65v-2.1c0-.58-.47-1.05-1.05-1.05z" fill="#FF6A00"/></svg>
                 </div>
-                <!-- Huawei Cloud -->
                 <div class="orbit-item orbit-item-5" title="Huawei Cloud">
                     <svg width="36" height="36" viewBox="0 0 24 24"><path d="M8.67 5.5C7.22 6.17 5.86 7.47 5.35 8.72c-.42 1.06.08 1.73.94 2.37.5.37 1.07.73 1.62 1.08l.31.2c.8.5 1.37.87 1.73 1.35a3.35 3.35 0 0 1 .5 1.93l.01.25.2-.12c.76-.48 2.23-1.53 2.71-2.09.49-.58.6-1.03.48-1.7a3.73 3.73 0 0 0-1.07-1.92c-.92-.92-2.46-2.63-2.87-3.3-.14-.23-.38-.73-.43-1.01a.2.2 0 0 0-.2-.17c-.15 0-.32.11-.51.21z" fill="#CF0A2C"/><path d="M15.33 5.5c1.45.67 2.81 1.97 3.32 3.22.42 1.06-.08 1.73-.94 2.37-.5.37-1.07.73-1.62 1.08l-.31.2c-.8.5-1.37.87-1.73 1.35a3.35 3.35 0 0 0-.5 1.93l-.01.25-.2-.12c-.76-.48-2.23-1.53-2.71-2.09-.49-.58-.6-1.03-.48-1.7a3.73 3.73 0 0 1 1.07-1.92c.92-.92 2.46-2.63 2.87-3.3.14-.23.38-.73.43-1.01a.2.2 0 0 1 .2-.17c.15 0 .32.11.51.21z" fill="#CF0A2C"/><path d="M12 15.9c-1.18.28-3.63 1.03-4.32 1.5-.74.51-1.05 1.06-.56 2.06.39.8 1.23 1.36 2.04 1.71 1.18.5 2.32.63 2.84.63.52 0 1.66-.13 2.84-.63.81-.35 1.65-.91 2.04-1.71.49-1 .18-1.55-.56-2.06-.69-.47-3.14-1.22-4.32-1.5z" fill="#CF0A2C"/></svg>
                 </div>
@@ -104,7 +115,7 @@
 <!-- ===== CLOUD PARTNERS ===== -->
 <section class="partners-strip">
     <div class="partners-strip-inner">
-        <p class="partners-strip-label">Authorized Partner of Leading Cloud Platforms</p>
+        <p class="partners-strip-label" data-i18n="partners.label">Authorized Partner of Leading Cloud Platforms</p>
         <div class="partners-logos">
             <div class="partner-logo">
                 <div class="partner-logo-icon">
@@ -144,74 +155,74 @@
 <section class="section" id="services">
     <div class="container">
         <div class="section-header fade-in">
-            <span class="section-label">What We Do</span>
-            <h2 class="section-title">Comprehensive Cloud Services</h2>
-            <p class="section-subtitle">From cloud reselling to fully managed operations, we provide end-to-end solutions that drive your business forward.</p>
+            <span class="section-label" data-i18n="services.label">What We Do</span>
+            <h2 class="section-title" data-i18n="services.title">Comprehensive Cloud Services</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">From cloud reselling to fully managed operations, we provide end-to-end solutions that drive your business forward.</p>
         </div>
         <div class="services-grid">
             <div class="service-card fade-in">
                 <div class="service-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
                 </div>
-                <h3>Ubiquitous Cloud Services</h3>
-                <p>Access AWS, Azure, Google Cloud, Alibaba Cloud and Huawei Cloud through a single partner — with significant cost savings through our volume discounts and committed-use agreements.</p>
+                <h3 data-i18n="services.cloud.title">Ubiquitous Cloud Services</h3>
+                <p data-i18n="services.cloud.desc">Access AWS, Azure, Google Cloud, Alibaba Cloud and Huawei Cloud through a single partner — with significant cost savings through our volume discounts and committed-use agreements.</p>
                 <ul class="service-features">
-                    <li>Up to 30% savings on cloud spend</li>
-                    <li>Consolidated billing across platforms</li>
-                    <li>Flexible payment terms</li>
-                    <li>Volume-based pricing tiers</li>
+                    <li data-i18n="services.cloud.f1">Up to 30% savings on cloud spend</li>
+                    <li data-i18n="services.cloud.f2">Consolidated billing across platforms</li>
+                    <li data-i18n="services.cloud.f3">Flexible payment terms</li>
+                    <li data-i18n="services.cloud.f4">Volume-based pricing tiers</li>
                 </ul>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                 </div>
-                <h3>Cloud Consultancy</h3>
-                <p>Our certified architects and consultants help you choose the right cloud strategy — whether multi-cloud, hybrid or single-platform — tailored to your business goals and compliance requirements.</p>
+                <h3 data-i18n="services.consult.title">Cloud Consultancy</h3>
+                <p data-i18n="services.consult.desc">Our certified architects and consultants help you choose the right cloud strategy — whether multi-cloud, hybrid or single-platform — tailored to your business goals and compliance requirements.</p>
                 <ul class="service-features">
-                    <li>Cloud readiness assessment</li>
-                    <li>Architecture design &amp; review</li>
-                    <li>Cost optimization analysis</li>
-                    <li>Compliance &amp; governance advisory</li>
+                    <li data-i18n="services.consult.f1">Cloud readiness assessment</li>
+                    <li data-i18n="services.consult.f2">Architecture design &amp; review</li>
+                    <li data-i18n="services.consult.f3">Cost optimization analysis</li>
+                    <li data-i18n="services.consult.f4">Compliance &amp; governance advisory</li>
                 </ul>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
                 </div>
-                <h3>Migration Services</h3>
-                <p>Seamlessly migrate your workloads to the cloud or between cloud platforms with zero downtime. Our proven migration framework minimizes risk and maximizes performance.</p>
+                <h3 data-i18n="services.migration.title">Migration Services</h3>
+                <p data-i18n="services.migration.desc">Seamlessly migrate your workloads to the cloud or between cloud platforms with zero downtime. Our proven migration framework minimizes risk and maximizes performance.</p>
                 <ul class="service-features">
-                    <li>Application &amp; database migration</li>
-                    <li>Data center to cloud migration</li>
-                    <li>Cross-cloud platform migration</li>
-                    <li>Post-migration optimization</li>
+                    <li data-i18n="services.migration.f1">Application &amp; database migration</li>
+                    <li data-i18n="services.migration.f2">Data center to cloud migration</li>
+                    <li data-i18n="services.migration.f3">Cross-cloud platform migration</li>
+                    <li data-i18n="services.migration.f4">Post-migration optimization</li>
                 </ul>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
                 </div>
-                <h3>Customized Development</h3>
-                <p>Build cloud-native applications, APIs and integrations that leverage the best of multi-cloud. Our engineering teams deliver scalable, secure solutions tailored to your needs.</p>
+                <h3 data-i18n="services.dev.title">Customized Development</h3>
+                <p data-i18n="services.dev.desc">Build cloud-native applications, APIs and integrations that leverage the best of multi-cloud. Our engineering teams deliver scalable, secure solutions tailored to your needs.</p>
                 <ul class="service-features">
-                    <li>Cloud-native application development</li>
-                    <li>API design &amp; integration</li>
-                    <li>DevOps &amp; CI/CD implementation</li>
-                    <li>Microservices architecture</li>
+                    <li data-i18n="services.dev.f1">Cloud-native application development</li>
+                    <li data-i18n="services.dev.f2">API design &amp; integration</li>
+                    <li data-i18n="services.dev.f3">DevOps &amp; CI/CD implementation</li>
+                    <li data-i18n="services.dev.f4">Microservices architecture</li>
                 </ul>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                 </div>
-                <h3>Managed Services</h3>
-                <p>Let us handle the day-to-day operations of your cloud infrastructure. Our 24/7 managed services team ensures optimal performance, security and availability.</p>
+                <h3 data-i18n="services.managed.title">Managed Services</h3>
+                <p data-i18n="services.managed.desc">Let us handle the day-to-day operations of your cloud infrastructure. Our 24/7 managed services team ensures optimal performance, security and availability.</p>
                 <ul class="service-features">
-                    <li>24/7 monitoring &amp; incident response</li>
-                    <li>Security management &amp; patching</li>
-                    <li>Backup &amp; disaster recovery</li>
-                    <li>Performance tuning &amp; scaling</li>
+                    <li data-i18n="services.managed.f1">24/7 monitoring &amp; incident response</li>
+                    <li data-i18n="services.managed.f2">Security management &amp; patching</li>
+                    <li data-i18n="services.managed.f3">Backup &amp; disaster recovery</li>
+                    <li data-i18n="services.managed.f4">Performance tuning &amp; scaling</li>
                 </ul>
             </div>
         </div>
@@ -222,38 +233,38 @@
 <section class="section section-dark" id="why-us">
     <div class="container">
         <div class="section-header fade-in">
-            <span class="section-label">Why Valisa Cloud</span>
-            <h2 class="section-title">Built for the Global Enterprise</h2>
-            <p class="section-subtitle">We combine deep multi-cloud expertise with regional knowledge to deliver unmatched value to our customers.</p>
+            <span class="section-label" data-i18n="why.label">Why Valisa Cloud</span>
+            <h2 class="section-title" data-i18n="why.title">Built for the Global Enterprise</h2>
+            <p class="section-subtitle" data-i18n="why.subtitle">We combine deep multi-cloud expertise with regional knowledge to deliver unmatched value to our customers.</p>
         </div>
         <div class="why-grid">
             <div class="why-card fade-in">
                 <div class="why-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                 </div>
-                <h3>Multi-Cloud Expertise</h3>
-                <p>Vendor-agnostic guidance across all 5 major cloud platforms ensures you choose the right fit for every workload.</p>
+                <h3 data-i18n="why.multicloud.title">Multi-Cloud Expertise</h3>
+                <p data-i18n="why.multicloud.desc">Vendor-agnostic guidance across all 5 major cloud platforms ensures you choose the right fit for every workload.</p>
             </div>
             <div class="why-card fade-in">
                 <div class="why-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
-                <h3>Enterprise Security</h3>
-                <p>GDPR-compliant, ISO-certified operations with end-to-end encryption and zero-trust architecture.</p>
+                <h3 data-i18n="why.security.title">Enterprise Security</h3>
+                <p data-i18n="why.security.desc">GDPR-compliant, ISO-certified operations with end-to-end encryption and zero-trust architecture.</p>
             </div>
             <div class="why-card fade-in">
                 <div class="why-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
-                <h3>Multilingual Support</h3>
-                <p>Native-speaking teams in English, German, Turkish, and Chinese deliver regional expertise with a personal touch.</p>
+                <h3 data-i18n="why.multilingual.title">Multilingual Support</h3>
+                <p data-i18n="why.multilingual.desc">Native-speaking teams in English, German, Turkish, and Chinese deliver regional expertise with a personal touch.</p>
             </div>
             <div class="why-card fade-in">
                 <div class="why-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                 </div>
-                <h3>Significant Savings</h3>
-                <p>Our partner-level agreements translate into substantial discounts on cloud services, passed directly to you.</p>
+                <h3 data-i18n="why.savings.title">Significant Savings</h3>
+                <p data-i18n="why.savings.desc">Our partner-level agreements translate into substantial discounts on cloud services, passed directly to you.</p>
             </div>
         </div>
     </div>
@@ -263,29 +274,23 @@
 <section class="section section-gray" id="regions">
     <div class="container">
         <div class="section-header fade-in">
-            <span class="section-label">Markets We Serve</span>
-            <h2 class="section-title">Bridging Continents with Cloud</h2>
-            <p class="section-subtitle">Strategically positioned to serve enterprises across Europe, Türkiye and Chinese businesses expanding globally.</p>
+            <span class="section-label" data-i18n="regions.label">Markets We Serve</span>
+            <h2 class="section-title" data-i18n="regions.title">Bridging Continents with Cloud</h2>
+            <p class="section-subtitle" data-i18n="regions.subtitle">Strategically positioned to serve enterprises across Europe, Türkiye and Chinese businesses expanding globally.</p>
         </div>
         <div class="regions-content">
             <div class="regions-map fade-in">
                 <svg viewBox="0 0 500 350" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Simplified Europe/Asia map outline -->
                     <path d="M60 180 Q80 140, 120 130 Q150 120, 180 125 Q200 130, 210 140 Q220 130, 240 125 Q260 120, 280 130 Q300 125, 310 135 Q330 130, 350 140 Q370 135, 390 145 Q410 140, 430 150 Q450 145, 470 155" stroke="#dee2e6" stroke-width="2" fill="none"/>
                     <path d="M60 180 Q70 200, 90 210 Q110 220, 130 215 Q150 225, 170 220 Q190 230, 200 225 Q210 240, 230 235 Q250 245, 270 240 Q290 250, 310 245 Q330 255, 350 250 Q370 260, 390 255 Q410 265, 430 260 Q450 270, 470 265" stroke="#dee2e6" stroke-width="2" fill="none"/>
-                    <!-- Europe highlight -->
                     <circle cx="150" cy="160" r="60" fill="rgba(0,188,212,0.08)" stroke="rgba(0,188,212,0.3)" stroke-width="2" stroke-dasharray="5,5"/>
                     <text x="150" y="164" text-anchor="middle" fill="#0097a7" font-size="13" font-weight="600">Europe</text>
-                    <!-- Türkiye highlight -->
                     <circle cx="270" cy="195" r="45" fill="rgba(21,101,192,0.08)" stroke="rgba(21,101,192,0.3)" stroke-width="2" stroke-dasharray="5,5"/>
                     <text x="270" y="199" text-anchor="middle" fill="#1565c0" font-size="13" font-weight="600">Türkiye</text>
-                    <!-- China highlight -->
                     <circle cx="410" cy="175" r="55" fill="rgba(255,106,0,0.08)" stroke="rgba(255,106,0,0.3)" stroke-width="2" stroke-dasharray="5,5"/>
                     <text x="410" y="179" text-anchor="middle" fill="#e65100" font-size="13" font-weight="600">China</text>
-                    <!-- Connection lines -->
                     <line x1="200" y1="165" x2="235" y2="185" stroke="#00bcd4" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
                     <line x1="305" y1="190" x2="365" y2="180" stroke="#00bcd4" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
-                    <!-- Dots -->
                     <circle cx="150" cy="145" r="5" fill="#0097a7" opacity="0.8"><animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/></circle>
                     <circle cx="270" cy="185" r="5" fill="#1565c0" opacity="0.8"><animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite" begin="1s"/></circle>
                     <circle cx="410" cy="165" r="5" fill="#e65100" opacity="0.8"><animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite" begin="2s"/></circle>
@@ -295,22 +300,22 @@
                 <div class="region-item">
                     <div class="region-flag">&#127466;&#127482;</div>
                     <div class="region-info">
-                        <h3>European Customers</h3>
-                        <p>Serving enterprises across the EU with GDPR-compliant cloud solutions. We understand European regulatory frameworks and deliver localized support across major markets including Germany, France, the Netherlands and the Nordics.</p>
+                        <h3 data-i18n="regions.europe.title">European Customers</h3>
+                        <p data-i18n="regions.europe.desc">Serving enterprises across the EU with GDPR-compliant cloud solutions. We understand European regulatory frameworks and deliver localized support across major markets including Germany, France, the Netherlands and the Nordics.</p>
                     </div>
                 </div>
                 <div class="region-item">
                     <div class="region-flag">&#127481;&#127479;</div>
                     <div class="region-info">
-                        <h3>Türkiye Customers</h3>
-                        <p>Dedicated local team supporting Turkish enterprises with cloud adoption, digital transformation and compliance with Turkish data regulations. Native Turkish-speaking engineers and consultants.</p>
+                        <h3 data-i18n="regions.turkiye.title">Türkiye Customers</h3>
+                        <p data-i18n="regions.turkiye.desc">Dedicated local team supporting Turkish enterprises with cloud adoption, digital transformation and compliance with Turkish data regulations. Native Turkish-speaking engineers and consultants.</p>
                     </div>
                 </div>
                 <div class="region-item">
                     <div class="region-flag">&#127464;&#127475;</div>
                     <div class="region-info">
-                        <h3>Chinese Go-Global Customers</h3>
-                        <p>Helping Chinese enterprises expand internationally with multi-cloud infrastructure across global regions. Bridging Chinese cloud ecosystems (Alibaba & Huawei) with Western platforms for seamless global operations.</p>
+                        <h3 data-i18n="regions.china.title">Chinese Go-Global Customers</h3>
+                        <p data-i18n="regions.china.desc">Helping Chinese enterprises expand internationally with multi-cloud infrastructure across global regions. Bridging Chinese cloud ecosystems (Alibaba & Huawei) with Western platforms for seamless global operations.</p>
                     </div>
                 </div>
             </div>
@@ -322,54 +327,54 @@
 <section class="section" id="pricing">
     <div class="container">
         <div class="section-header fade-in">
-            <span class="section-label">Solutions</span>
-            <h2 class="section-title">Tailored Solutions for Every Stage</h2>
-            <p class="section-subtitle">Whether you're starting your cloud journey or optimizing a complex multi-cloud environment, we have a solution for you.</p>
+            <span class="section-label" data-i18n="solutions.label">Solutions</span>
+            <h2 class="section-title" data-i18n="solutions.title">Tailored Solutions for Every Stage</h2>
+            <p class="section-subtitle" data-i18n="solutions.subtitle">Whether you're starting your cloud journey or optimizing a complex multi-cloud environment, we have a solution for you.</p>
         </div>
         <div class="pricing-cards">
             <div class="pricing-card fade-in">
-                <div class="pricing-badge">Most Popular</div>
+                <div class="pricing-badge" data-i18n="solutions.start.badge">Most Popular</div>
                 <div class="pricing-icon">&#9729;&#65039;</div>
-                <h3>Cloud Start</h3>
-                <p class="price">For Growing Businesses</p>
-                <p>Get started with cloud services at preferential rates, with guided onboarding and basic support.</p>
+                <h3 data-i18n="solutions.start.title">Cloud Start</h3>
+                <p class="price" data-i18n="solutions.start.price">For Growing Businesses</p>
+                <p data-i18n="solutions.start.desc">Get started with cloud services at preferential rates, with guided onboarding and basic support.</p>
                 <ul class="pricing-features">
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Single cloud platform</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Partner discount pricing</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Onboarding support</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Business hours support</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.start.f1">Single cloud platform</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.start.f2">Partner discount pricing</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.start.f3">Onboarding support</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.start.f4">Business hours support</span></li>
                 </ul>
-                <a href="#contact" class="btn btn-outline" style="color:var(--gray-900); border-color:var(--gray-300); width:100%; justify-content:center;">Get Started</a>
+                <a href="#contact" class="btn btn-outline" style="color:var(--gray-900); border-color:var(--gray-300); width:100%; justify-content:center;" data-i18n="solutions.start.cta">Get Started</a>
             </div>
             <div class="pricing-card featured fade-in">
-                <div class="pricing-badge">Recommended</div>
+                <div class="pricing-badge" data-i18n="solutions.pro.badge">Recommended</div>
                 <div class="pricing-icon">&#127760;</div>
-                <h3>Cloud Professional</h3>
-                <p class="price">For Enterprises</p>
-                <p>Multi-cloud management with consulting, migration support and proactive monitoring included.</p>
+                <h3 data-i18n="solutions.pro.title">Cloud Professional</h3>
+                <p class="price" data-i18n="solutions.pro.price">For Enterprises</p>
+                <p data-i18n="solutions.pro.desc">Multi-cloud management with consulting, migration support and proactive monitoring included.</p>
                 <ul class="pricing-features">
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Multi-cloud platforms</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Maximum discounts</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Dedicated architect</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>24/7 managed services</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Migration support</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.pro.f1">Multi-cloud platforms</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.pro.f2">Maximum discounts</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.pro.f3">Dedicated architect</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.pro.f4">24/7 managed services</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.pro.f5">Migration support</span></li>
                 </ul>
-                <a href="#contact" class="btn btn-primary" style="width:100%; justify-content:center;">Contact Sales</a>
+                <a href="#contact" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="solutions.pro.cta">Contact Sales</a>
             </div>
             <div class="pricing-card fade-in">
-                <div class="pricing-badge">Custom</div>
+                <div class="pricing-badge" data-i18n="solutions.ent.badge">Custom</div>
                 <div class="pricing-icon">&#128640;</div>
-                <h3>Cloud Enterprise</h3>
-                <p class="price">For Large Organizations</p>
-                <p>Fully customized cloud solutions with dedicated teams, custom development and SLA guarantees.</p>
+                <h3 data-i18n="solutions.ent.title">Cloud Enterprise</h3>
+                <p class="price" data-i18n="solutions.ent.price">For Large Organizations</p>
+                <p data-i18n="solutions.ent.desc">Fully customized cloud solutions with dedicated teams, custom development and SLA guarantees.</p>
                 <ul class="pricing-features">
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>All platforms & services</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Custom pricing agreements</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Dedicated team</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Custom development</li>
-                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Enterprise SLA</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.ent.f1">All platforms & services</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.ent.f2">Custom pricing agreements</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.ent.f3">Dedicated team</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.ent.f4">Custom development</span></li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="solutions.ent.f5">Enterprise SLA</span></li>
                 </ul>
-                <a href="#contact" class="btn btn-outline" style="color:var(--gray-900); border-color:var(--gray-300); width:100%; justify-content:center;">Talk to Us</a>
+                <a href="#contact" class="btn btn-outline" style="color:var(--gray-900); border-color:var(--gray-300); width:100%; justify-content:center;" data-i18n="solutions.ent.cta">Talk to Us</a>
             </div>
         </div>
     </div>
@@ -379,21 +384,21 @@
 <section class="section section-gray" id="contact">
     <div class="container">
         <div class="section-header fade-in">
-            <span class="section-label">Contact Us</span>
-            <h2 class="section-title">Let's Build Your Cloud Strategy</h2>
-            <p class="section-subtitle">Ready to optimize your cloud infrastructure? Get in touch and our team will respond within 24 hours.</p>
+            <span class="section-label" data-i18n="contact.label">Contact Us</span>
+            <h2 class="section-title" data-i18n="contact.title">Let's Build Your Cloud Strategy</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Ready to optimize your cloud infrastructure? Get in touch and our team will respond within 24 hours.</p>
         </div>
         <div class="contact-content">
             <div class="contact-info fade-in">
-                <h3>We'd Love to Hear from You</h3>
-                <p>Whether you're looking for cloud cost optimization, planning a migration, or need a fully managed solution — our experts are ready to help.</p>
+                <h3 data-i18n="contact.heading">We'd Love to Hear from You</h3>
+                <p data-i18n="contact.desc">Whether you're looking for cloud cost optimization, planning a migration, or need a fully managed solution — our experts are ready to help.</p>
                 <div class="contact-methods">
                     <div class="contact-method">
                         <div class="contact-method-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         </div>
                         <div class="contact-method-text">
-                            <span class="contact-method-label">Email</span>
+                            <span class="contact-method-label" data-i18n="contact.email.label">Email</span>
                             <span class="contact-method-value">info@valisacloud.com</span>
                         </div>
                     </div>
@@ -402,8 +407,8 @@
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         </div>
                         <div class="contact-method-text">
-                            <span class="contact-method-label">Phone</span>
-                            <span class="contact-method-value">+49 (0) 123 456 7890</span>
+                            <span class="contact-method-label" data-i18n="contact.phone.label">Phone</span>
+                            <span class="contact-method-value">+36 30 422 3455</span>
                         </div>
                     </div>
                     <div class="contact-method">
@@ -411,8 +416,8 @@
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         </div>
                         <div class="contact-method-text">
-                            <span class="contact-method-label">Office</span>
-                            <span class="contact-method-value">Frankfurt, Germany</span>
+                            <span class="contact-method-label" data-i18n="contact.office.label">Office</span>
+                            <span class="contact-method-value">Budapest, Hungary</span>
                         </div>
                     </div>
                 </div>
@@ -420,41 +425,41 @@
             <form class="contact-form fade-in" id="contactForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                        <label for="firstName" data-i18n="contact.form.firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" data-i18n-placeholder="contact.form.placeholder.firstName" placeholder="John" required>
                     </div>
                     <div class="form-group">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                        <label for="lastName" data-i18n="contact.form.lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" data-i18n-placeholder="contact.form.placeholder.lastName" placeholder="Doe" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="email">Business Email</label>
-                    <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                    <label for="email" data-i18n="contact.form.email">Business Email</label>
+                    <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.placeholder.email" placeholder="john@company.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" id="company" name="company" placeholder="Your company name">
+                    <label for="company" data-i18n="contact.form.company">Company</label>
+                    <input type="text" id="company" name="company" data-i18n-placeholder="contact.form.placeholder.company" placeholder="Your company name">
                 </div>
                 <div class="form-group">
-                    <label for="service">Interested In</label>
+                    <label for="service" data-i18n="contact.form.service">Interested In</label>
                     <select id="service" name="service">
-                        <option value="">Select a service...</option>
-                        <option value="reselling">Cloud Reselling & Discounts</option>
-                        <option value="consulting">Cloud Consultancy</option>
-                        <option value="migration">Migration Services</option>
-                        <option value="development">Custom Development</option>
-                        <option value="managed">Managed Services</option>
-                        <option value="multiple">Multiple Services</option>
+                        <option value="" data-i18n="contact.form.service.placeholder">Select a service...</option>
+                        <option value="reselling" data-i18n="contact.form.service.reselling">Cloud Reselling & Discounts</option>
+                        <option value="consulting" data-i18n="contact.form.service.consulting">Cloud Consultancy</option>
+                        <option value="migration" data-i18n="contact.form.service.migration">Migration Services</option>
+                        <option value="development" data-i18n="contact.form.service.development">Custom Development</option>
+                        <option value="managed" data-i18n="contact.form.service.managed">Managed Services</option>
+                        <option value="multiple" data-i18n="contact.form.service.multiple">Multiple Services</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Tell us about your project or requirements..."></textarea>
+                    <label for="message" data-i18n="contact.form.message">Message</label>
+                    <textarea id="message" name="message" data-i18n-placeholder="contact.form.placeholder.message" placeholder="Tell us about your project or requirements..."></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary btn-submit">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4z"/></svg>
-                    Send Message
+                    <span data-i18n="contact.form.submit">Send Message</span>
                 </button>
             </form>
         </div>
@@ -467,23 +472,23 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="#" class="nav-logo" style="margin-bottom: 0.5rem;">
-                    <img src="assets/images/logo.png" alt="Valisa Cloud" style="height:36px;">
+                    <img src="assets/images/logo.svg" alt="Valisa Cloud" style="height:36px;">
                     <span class="nav-logo-text">VALISA <span>CLOUD</span></span>
                 </a>
-                <p>Your trusted multi-cloud partner for Europe, Türkiye and Chinese go-global enterprises. We bridge cloud platforms and continents.</p>
+                <p data-i18n="footer.brand">Your trusted multi-cloud partner for Europe, Türkiye and Chinese go-global enterprises. We bridge cloud platforms and continents.</p>
             </div>
             <div>
-                <h4>Services</h4>
+                <h4 data-i18n="footer.services">Services</h4>
                 <ul class="footer-links">
-                    <li><a href="#services">Cloud Reselling</a></li>
-                    <li><a href="#services">Consultancy</a></li>
-                    <li><a href="#services">Migration</a></li>
-                    <li><a href="#services">Development</a></li>
-                    <li><a href="#services">Managed Services</a></li>
+                    <li><a href="#services" data-i18n="footer.services.reselling">Cloud Reselling</a></li>
+                    <li><a href="#services" data-i18n="footer.services.consultancy">Consultancy</a></li>
+                    <li><a href="#services" data-i18n="footer.services.migration">Migration</a></li>
+                    <li><a href="#services" data-i18n="footer.services.development">Development</a></li>
+                    <li><a href="#services" data-i18n="footer.services.managed">Managed Services</a></li>
                 </ul>
             </div>
             <div>
-                <h4>Platforms</h4>
+                <h4 data-i18n="footer.platforms">Platforms</h4>
                 <ul class="footer-links">
                     <li><a href="#">Amazon Web Services</a></li>
                     <li><a href="#">Microsoft Azure</a></li>
@@ -493,18 +498,18 @@
                 </ul>
             </div>
             <div>
-                <h4>Company</h4>
+                <h4 data-i18n="footer.company">Company</h4>
                 <ul class="footer-links">
-                    <li><a href="#why-us">About Us</a></li>
-                    <li><a href="#regions">Markets</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Imprint</a></li>
+                    <li><a href="#why-us" data-i18n="footer.company.about">About Us</a></li>
+                    <li><a href="#regions" data-i18n="footer.company.markets">Markets</a></li>
+                    <li><a href="#contact" data-i18n="footer.company.contact">Contact</a></li>
+                    <li><a href="#" data-i18n="footer.company.privacy">Privacy Policy</a></li>
+                    <li><a href="#" data-i18n="footer.company.imprint">Imprint</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Valisa Cloud. All rights reserved.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 Valisa Cloud. All rights reserved.</p>
             <div class="footer-socials">
                 <a href="#" aria-label="LinkedIn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
