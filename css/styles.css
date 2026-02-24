@@ -175,6 +175,8 @@ body {
     position: absolute;
     top: calc(100% + 8px);
     right: 0;
+    display: none;
+    flex-direction: column;
     background: rgba(10, 22, 40, 0.98);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255,255,255,0.1);
@@ -182,17 +184,11 @@ body {
     padding: 0.4rem;
     min-width: 160px;
     box-shadow: var(--shadow-xl);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-8px);
-    transition: var(--transition);
     z-index: 1001;
 }
 
 .lang-dropdown.open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    display: flex;
 }
 
 .lang-option {
