@@ -165,36 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     window.addEventListener('scroll', highlightNav, { passive: true });
 
-    // Contact form
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData.entries());
-
-        const btn = contactForm.querySelector('.btn-submit');
-        const originalContent = btn.innerHTML;
-        const successText = currentTranslations['contact.form.success'] || 'Message Sent!';
-        btn.innerHTML = `
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            ${successText}
-        `;
-        btn.style.background = '#4caf50';
-        btn.disabled = true;
-
-        setTimeout(() => {
-            btn.innerHTML = originalContent;
-            btn.style.background = '';
-            btn.disabled = false;
-            contactForm.reset();
-        }, 3000);
-
-        console.log('Form submission:', data);
-    });
-
     // Counter animation
     const animateCounter = (el, target) => {
         const isNumber = !isNaN(parseInt(target));
